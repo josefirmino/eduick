@@ -1,0 +1,17 @@
+.btnPrimary{
+  padding: 1.4rem 4.4rem;
+  background: var(--brand-yellow-light);
+  box-shadow: 1px 3px 11px -3px rgba(255, 231, 150, 0.45);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.02em;
+  color: var(--brand-purple-light);
+
+  transition: filter 0.3s;
+  &:hover{
+    filter: brightness(1.05);
+  }
+}
