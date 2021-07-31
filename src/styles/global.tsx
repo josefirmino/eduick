@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  // Colors
+// Colors
 
 :root{
   --brand-blue-dark: #200E64;
@@ -33,6 +33,9 @@ export default createGlobalStyle`
 
 input{
   border: none;
+}
+
+input[type="password"]{
 }
 
 img {

@@ -1,7 +1,90 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import { useSpring, animated } from 'react-spring';
-import styled from 'styled-components';
-import { MdClose } from 'react-icons/md';
+import React, { useRef, useEffect, useState, useCallback } from 'react'
+import { useSpring, animated } from 'react-spring'
+import styled from 'styled-components'
+import { MdClose } from 'react-icons/md'
+
+export const Modal = ({ showModal, setShowModal }) => {
+  const modalRef = useRef()
+
+  const animation = useSpring({
+    config: {
+      duration: 250
+    },
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
+  })
+
+  const closeModal = e => {
+    if (modalRef.current === e.target) {
+      setShowModal(false)
+    }
+  }
+
+  const keyPress = useCallback(
+    e => {
+      if (e.key === 'Escape' && showModal) {
+        setShowModal(false);
+        console.log('I pressed')
+      }
+    },
+    [setShowModal, showModal]
+  )
+
+  useEffect(
+    () => {
+      document.addEventListener('keydown', keyPress)
+      return () => document.removeEventListener('keydown', keyPress)
+    },
+    [keyPress]
+  )
+  
+  
+  const [show, setShow] = useState(true)
+  const teste = show? `password`:`text`
+
+  return (
+    
+    <>
+      {showModal ? (
+        <Background onClick={closeModal} ref={modalRef}>
+          <animated.div style={animation}>
+            <ModalWrapper>
+              <ModalContent>
+                <h1>Get Started
+                <span>Just Login?</span></h1>
+                <ModalContentInputs>
+                  <ModalInputs>
+                  <label htmlFor="">Username:</label>
+                  <input
+                  type="text"
+                  />
+                  </ModalInputs>
+
+                  <ModalInputs>
+                  <label htmlFor="">Username:</label>
+                  <input
+                  type={teste}
+                  />
+                  {
+                    show?<PasswordMask onClick={()=>setShow(!show)} />:<PasswordMaskShow onClick={()=>setShow(!show)}/>
+                  }
+                  </ModalInputs>
+                </ModalContentInputs>
+                <button>Login</button>
+              </ModalContent>
+              <BaseCloseModalButton>
+                <CloseModalButton
+                  aria-label='Close modal'
+                  onClick={() => setShowModal(prev => !prev)}
+                />
+              </BaseCloseModalButton>
+            </ModalWrapper>
+          </animated.div>
+        </Background>
+      ) : null}
+    </>
+  )
+}
 
 const Background = styled.div`
   display: flex;
@@ -17,8 +100,7 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 52.5rem;
-  height: 47.9rem;  
+  width: 52.5rem;  
   background: #6A40E4;
   border-radius: 4px;
   z-index: 10;
@@ -55,11 +137,30 @@ const ModalContent = styled.div`
       color: #FFEAA4;
     }
   }
+  button {
+    width: 132.52px;
+    height: 48px;
+    background: var(--brand-yellow-light);
+    border-radius: 4px;
+    margin-left: auto;
+    margin-top: 27px;
+
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 191.68%;
+    text-transform: uppercase;
+    color: #744FF4;
+  }
+`;
+
+const ModalContentInputs = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.8rem;
   label{
     font-size: 1.6rem;
     line-height: 191.68%;
     color: #FFFFFF;
-    margin-bottom: .5rem;
   }
   input{
     background: #7955E8;
@@ -71,6 +172,7 @@ const ModalContent = styled.div`
     width: 100%;
     padding: 2rem;
     transition: all .3s;
+    margin-top: .5rem;
     &::placeholder{
       color: var(--white);
     }
@@ -80,23 +182,41 @@ const ModalContent = styled.div`
       color: var(--white);
       border: 1px solid rgba(255, 234, 164, 0.5);
     }
-    &:not(:last-child){
-      margin-bottom: 16px;
-    }
   }
-  button {
-    padding: 10px 24px;
-    background: #141414;
-    color: #fff;
-    border: none;
-  }
-`;
+`
 
-const ModalContentInputs = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 4.8rem;
-`;
+const ModalInputs = styled.div`
+  position: relative;
+  &:not(:last-child){
+    margin-bottom: 16px;
+  }
+`
+
+const PasswordMask = styled.a`
+  &:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background:url('/images/icons/icon-eye.svg') no-repeat center center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.8rem;
+    margin-left: -2.5px;
+  }
+`
+
+const PasswordMaskShow = styled.a`
+  &:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background:url('/images/icons/icon-eye-show.svg') no-repeat center center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.8rem;
+    margin-left: -2.5px;
+  }
+`
 
 const BaseCloseModalButton = styled.div`
   position: absolute;
@@ -119,73 +239,3 @@ const CloseModalButton = styled(MdClose)`
   color: #fff;
   stroke-width: 1px !important;
 `;
-
-export const Modal = ({ showModal, setShowModal }) => {
-  const modalRef = useRef()
-
-  const animation = useSpring({
-    config: {
-      duration: 250
-    },
-    opacity: showModal ? 1 : 0,
-    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-  });
-
-  const closeModal = e => {
-    if (modalRef.current === e.target) {
-      setShowModal(false)
-    }
-  }
-
-  const keyPress = useCallback(
-    e => {
-      if (e.key === 'Escape' && showModal) {
-        setShowModal(false);
-        console.log('I pressed')
-      }
-    },
-    [setShowModal, showModal]
-  );
-
-  useEffect(
-    () => {
-      document.addEventListener('keydown', keyPress)
-      return () => document.removeEventListener('keydown', keyPress)
-    },
-    [keyPress]
-  );
-
-  return (
-    
-    <>
-      {showModal ? (
-        <Background onClick={closeModal} ref={modalRef}>
-          <animated.div style={animation}>
-            <ModalWrapper>
-              <ModalContent>
-                <h1>Get Started
-                <span>Just Login?</span></h1>
-                <ModalContentInputs>
-                  <label htmlFor="">Username:</label>
-                  <input
-                  type="text"
-                  />
-                  <label htmlFor="">Username:</label>
-                  <input
-                  type="password"
-                  />
-                </ModalContentInputs>
-              </ModalContent>
-              <BaseCloseModalButton>
-                <CloseModalButton
-                  aria-label='Close modal'
-                  onClick={() => setShowModal(prev => !prev)}
-                />
-              </BaseCloseModalButton>
-            </ModalWrapper>
-          </animated.div>
-        </Background>
-      ) : null}
-    </>
-  )
-}
