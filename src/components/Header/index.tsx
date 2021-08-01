@@ -2,7 +2,7 @@
 import styles from './styles.module.scss'
 
 // Components
-import { SignInButton } from '../SignInButton'
+import { SignInButton } from './SignInButton'
 
 export function Header(){
   return(

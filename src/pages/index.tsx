@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      <ContentHero /> 
+      <ContentHero />
 
     </>
   )

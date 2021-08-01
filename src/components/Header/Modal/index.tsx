@@ -3,6 +3,9 @@ import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
 
+import { SignInButtonGithub } from './SignInButtonGithub'
+
+
 export const Modal = ({ showModal, setShowModal }) => {
   const modalRef = useRef()
 
@@ -38,9 +41,8 @@ export const Modal = ({ showModal, setShowModal }) => {
     [keyPress]
   )
   
-  
   const [show, setShow] = useState(true)
-  const teste = show? `password`:`text`
+  const InputType = show? `password`:`text`
 
   return (
     
@@ -61,16 +63,20 @@ export const Modal = ({ showModal, setShowModal }) => {
                   </ModalInputs>
 
                   <ModalInputs>
-                  <label htmlFor="">Username:</label>
+                  <label htmlFor="">Password:</label>
                   <input
-                  type={teste}
+                  type={InputType}
                   />
                   {
                     show?<PasswordMask onClick={()=>setShow(!show)} />:<PasswordMaskShow onClick={()=>setShow(!show)}/>
                   }
                   </ModalInputs>
                 </ModalContentInputs>
+                <ModalContentButtons>
                 <button>Login</button>
+                <hr/>
+                <SignInButtonGithub/>
+                </ModalContentButtons>
               </ModalContent>
               <BaseCloseModalButton>
                 <CloseModalButton
@@ -137,12 +143,26 @@ const ModalContent = styled.div`
       color: #FFEAA4;
     }
   }
+  
+`;
+
+const ModalContentButtons = styled.div`
+  hr{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2.35rem;
+    margin-bottom: 1.05rem;
+  }
+  label{
+    font-size: 16px;
+    line-height: 191.68%;
+    color: var(--white);
+
+  }
   button {
-    width: 132.52px;
+    width: 100%;
     height: 48px;
     background: var(--brand-yellow-light);
     border-radius: 4px;
-    margin-left: auto;
     margin-top: 27px;
 
     font-weight: bold;
@@ -150,8 +170,23 @@ const ModalContent = styled.div`
     line-height: 191.68%;
     text-transform: uppercase;
     color: #744FF4;
+    &:not(:last-child){
+      margin-right: 1%;
+    }
+    &:last-child{
+      margin-top: 0.8rem;
+      &:before{
+        content: "";
+        width: 24px;
+        height: 24px;
+        background:url('/images/icons/github.svg') no-repeat center center;
+        position: absolute;
+        margin-left: -2.5rem;
+      }
+    }
   }
-`;
+
+`
 
 const ModalContentInputs = styled.div`
   display: flex;

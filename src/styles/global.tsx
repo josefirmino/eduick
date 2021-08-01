@@ -8,7 +8,7 @@ export default createGlobalStyle`
   --brand-purple: #7A57FD;
   --brand-purple-light: #6F48EC;
   --brand-yellow-light: #FFD74F;
-  --bg-grandient: linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);
+  --bg-gradient: linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);
   
   // Default
   

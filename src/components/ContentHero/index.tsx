@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import { motion } from 'framer-motion'
-import { RadioBtn } from '../RadioButton'
+import { RadioBtn } from './RadioButton'
 
 export function ContentHero(){
 
