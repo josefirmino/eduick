@@ -23,6 +23,7 @@ export class RadioBtn extends Component{
           value="teacher"
           name="cardRadio"
           type="radio"
+          checked
           onChange={this.handleChange}
           />
           <label htmlFor="selectedTeacher">i’m a teacher</label>

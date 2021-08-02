@@ -18,7 +18,7 @@ export function ContentHero(){
               default: { duration: 2 },
             }}
           >
-          <img src="/images/shape.svg" alt="Illustration" className={styles.shape} />
+          <img src="/images/shape1.svg" alt="Illustration" className={styles.shape} />
           </motion.div>
           <motion.div
             animate={{ x: 0 }}
@@ -63,7 +63,7 @@ export function ContentHero(){
               </div>
         </div>
         <div className={styles.imageDetail}>
-          <img src="/images/detail.svg" alt="Illustration" />
+          <img src="/images/detail.svg" alt="Illustration" className={styles.imageDetailRight} />
         </div>
       </div>
     </section>

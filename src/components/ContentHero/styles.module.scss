@@ -21,8 +21,9 @@
         position: absolute;
       }
       .shape{
-        left: -4rem;
-        bottom: 0;
+        top: 6.9rem;
+        left: 100px;
+        transform: rotate(-21.37deg);
       }
       .shape2{
         right: 18.6rem;
@@ -128,10 +129,18 @@
       
     }
     .imageDetail{
-      position: absolute;
-      top: 0;
-      right: -400px;
-      z-index: 1;
+      position: relative;
+      width: 100%;
+      max-width: 69.9rem;
+      margin-left: -642px;
+      height: 95.6rem;
+      // Menos o margin top do hero 20.5rem
+      top: -20.5rem;
+      .imageDetailRight{
+        position: absolute;
+        left: 60.4rem;
+        width: 100%;
+      }
     }
   }
 }
@@ -143,20 +152,29 @@
   background-color: #200E64;
 }
 
-@media(max-width: 1920px){
+@media(max-width: 2218px){
   .sHero{
     height: 82.3rem;
     padding-top: 20.5rem;
     .container{
-      .imageDetail{
-        position: absolute;
-        top: 0;
-        right: -200px;
-      } 
+      .text{
+        max-width: 604px;
+        margin-right: 0;
+      }
     }
   }
   .footer{
-    height: 250px;
+    height: 30.2rem;
+  }
+}
+
+@media(max-width: 1920px){
+  .sHero{
+    height: 82.3rem;
+    padding-top: 20.5rem;
+  }
+  .footer{
+    height: 25rem;
   }
 }
 
@@ -165,16 +183,182 @@
     height: 82.5rem;
     padding-top: 20.5rem;
     .container{
+      .image{
+        margin-left: -16.5rem;
+      }
       .imageDetail{
-        position: absolute;
-        top: 0;
-        right: -400px;
+        .imageDetailRight{
+          left: 53.4rem;
+          height: 887px;
+        }
       } 
     }
   }
 }
 
 @media(max-width: 1280px){
-
+  .sHero{
+    padding-top: 12.5rem;
+    height: 90vh;
+    .container{
+      .image{
+        max-width: 63.78rem;
+        margin-left: -22.5rem;
+        img{
+          max-width: 45% !important; 
+        }
+        .shape{
+          left: 204px;
+        }
+        .shape2{
+          left: 209px;
+        }
+        .detail{
+          bottom: 42rem;
+        }
+        .shape3{
+          max-width: 150px !important;
+          bottom: 33.9rem;
+        }
+      }
+      .text{
+        padding-top: 2rem;
+        margin-left: 8rem;
+        p{
+          margin: 40px 0;
+        }
+      }
+    }
+  }
 }
 
+@media(max-width: 1150px){
+  .sHero{
+    .container{
+      .image{
+        margin-left: -16.5rem;
+      }
+      .text{
+        margin-left: 0rem;
+      }
+    }
+  }
+}
+
+@media(max-width:991px){
+  .sHero{
+    .container{
+      .image{
+        margin-top: 8rem;
+        .shape{
+          max-width: 35% !important;
+          top: 4rem;
+          left: 15.3rem;
+        }
+        .shape2{
+          max-width: 35% !important;
+          left: 16.5rem;
+          top: 1rem;
+        }
+        .shapeImg{
+          max-width: 35% !important;
+          left: 18rem;
+        }
+        .shape3{
+          max-width: 8rem !important;
+          bottom: 49.9rem;
+          right: 20.7rem;
+        }
+        .detail{
+          max-width: 5rem !important;
+          bottom: 52rem;
+          right: 16.19rem;
+        }
+      }
+      .text{
+        margin-left: -19.5rem;
+        max-width: 505px;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px){
+  .sHero{
+    padding-top: 6.5rem;
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+      .text{
+        margin-left: 1rem;
+      }
+      .imageDetail{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+ .sHero{
+  padding-top: 9.5rem;
+  height: 90vh;
+   .container{
+     .image{
+       margin-top: 6rem;
+       width: 186%;
+       max-width: 34.5rem !important;
+       height: 50rem;
+       margin-left: -9rem;
+       .shape,
+       .shape2,
+       .shapeImg{
+         width: 100%;
+         max-width: 208px !important;
+         height: 415px;
+       }
+       .detail,
+       .shape3{
+         display: none;
+       }
+     }
+     .text{
+       width: 100%;
+       margin-left: 0;
+       padding: 0 2rem;
+       h1{
+        font-size: 2.8rem;
+        line-height: 1rem;
+        span{
+          font-size: 3.2rem;
+        }
+       }
+       p{
+         display: none;
+       }
+
+      .inputText{
+        margin-top: 6rem;
+        max-width: 100%;
+        height: 4.8rem;
+        font-size: 1.4rem;
+      }
+      .bottomForm{
+        flex-direction: column;
+        margin-top: 1.6rem;
+        .choice{
+          height: 4.8rem;
+        }
+        .btnSearch{
+          width: 100%;
+          height: 4.8rem;
+          margin-top: 1.6rem;
+        }
+      }
+     }
+   }
+ }
+ .footer{
+   height: 9.8rem;
+ }
+}

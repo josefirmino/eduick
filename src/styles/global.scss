@@ -42,9 +42,11 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+@media(max-width: 1366px){
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 }
 
 button,

@@ -40,3 +40,46 @@
     }
   }
 }
+
+@media(max-width: 1150px){
+  .container{
+    padding: 0 6.5rem;
+  }
+}
+
+@media(max-width: 800px){
+  .header{
+    margin-top: 1rem;
+    .container{
+      padding: 0 1rem;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .header{
+    .container{
+      .menu{
+        nav{
+          display: none;
+        }
+        
+      }
+      button{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .header{
+    margin-top: 0;
+    .container{
+      padding-left: 2rem;
+      .menu{
+        margin-top: 2.7rem;
+      }
+    }
+  }
+}
