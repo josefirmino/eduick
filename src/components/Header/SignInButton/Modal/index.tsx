@@ -115,7 +115,16 @@ const ModalWrapper = styled.div`
   align-items: flex-start;
   border-radius: 10px;
   padding: 4rem;
-`;
+
+  @media(max-width: 600px) {
+    width: 100%;
+  }
+  @media(max-width: 480px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+`
 
 const ModalContent = styled.div`
   display: flex;
@@ -123,6 +132,12 @@ const ModalContent = styled.div`
   line-height: 1.8;
   color: #141414;
   width: 100%;
+  @media(max-width: 480px) {
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+  }
   h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -264,6 +279,10 @@ const BaseCloseModalButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media(max-width: 480px) {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 `
 
 const CloseModalButton = styled(MdClose)`

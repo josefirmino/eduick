@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 import React, { useState } from 'react'
-import { Modal } from '../Modal/index'
+import { Modal } from './Modal/index'
 
 export function SignInButton(){
   const [showModal, setShowModal ] = useState(false)

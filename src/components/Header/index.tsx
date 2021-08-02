@@ -3,17 +3,19 @@ import styles from './styles.module.scss'
 
 // Components
 import { SignInButton } from './SignInButton'
+import { MenuMobile } from './MenuMobile'
 
 export function Header(){
   return(
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.menu}>
-        <a href="#">
-          <img src="/images/logo.svg" alt="Logo Eduick" />
-        </a>
+          <MenuMobile />
+          <a href="#">
+            <img src="/images/logo.svg" alt="Logo Eduick" />
+          </a>
 
-        <nav>
+          <nav>
           <ul>
             <li>
               <a href="#">

@@ -17,6 +17,9 @@
     justify-content: space-between;
     .menu{
       display: flex;
+      .menuMobile{
+        display: none;
+      }
       ul{
         display: flex;
         margin-left: 8rem;
@@ -60,12 +63,16 @@
   .header{
     .container{
       .menu{
-        nav{
+
+        a{
+          display: flex;
+        }
+        > nav{
           display: none;
         }
         
       }
-      button{
+      > button{
         display: none;
       }
     }
