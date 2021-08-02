@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
+import { useSession } from 'next-auth/client'
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 import { MdClose } from 'react-icons/md'
@@ -7,6 +8,7 @@ import { SignInButtonGithub } from './SignInButtonGithub'
 
 
 export const Modal = ({ showModal, setShowModal }) => {
+  const [session] = useSession()
   const modalRef = useRef()
 
   const animation = useSpring({
@@ -44,8 +46,31 @@ export const Modal = ({ showModal, setShowModal }) => {
   const [show, setShow] = useState(true)
   const InputType = show? `password`:`text`
 
-  return (
+  return session ? (
     
+    <>
+      {showModal ? (
+        <Background onClick={closeModal} ref={modalRef}>
+          <animated.div style={animation}>
+            <ModalWrapper>
+              <ModalContent>
+                <ModalContentButtons>
+                
+                <SignInButtonGithub/>
+                </ModalContentButtons>
+              </ModalContent>
+              <BaseCloseModalButton>
+                <CloseModalButton
+                  aria-label='Close modal'
+                  onClick={() => setShowModal(prev => !prev)}
+                />
+              </BaseCloseModalButton>
+            </ModalWrapper>
+          </animated.div>
+        </Background>
+      ) : null}
+    </>
+  ) : (
     <>
       {showModal ? (
         <Background onClick={closeModal} ref={modalRef}>

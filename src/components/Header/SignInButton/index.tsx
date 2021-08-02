@@ -9,7 +9,7 @@ export function SignInButton(){
     setShowModal(prev => !prev)
   }
 
-  return(
+  return (
     <>
     <button 
       type="button"
@@ -24,5 +24,5 @@ export function SignInButton(){
           setShowModal={setShowModal}
         />
     </>
-  )
+  ) 
 }
