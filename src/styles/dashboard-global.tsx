@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
 // Colors
 
 :root{
@@ -5,7 +8,7 @@
   --brand-purple: #7A57FD;
   --brand-purple-light: #6F48EC;
   --brand-yellow-light: #FFD74F;
-  --bg-grandient: linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);
+  --bg-gradient: linear-gradient(180deg, #7A57FD 0%, #6135D7 100%);
   
   // Default
   
@@ -32,6 +35,9 @@ input{
   border: none;
 }
 
+input[type="password"]{
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -42,15 +48,21 @@ html {
   font-size: 62.5%;
 }
 
-body{
-  background-color: #000 !important;
+html, body {
+  overflow-x: hidden;
 }
 
-@media(max-width: 1366px){
-  body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+@media (min-width: 1366px) {
+  body::-webkit-scrollbar{
+    width: 5px;
+    background-color: #7A57FD;
   }
+
+  body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #5F41CF;
+  }
+
 }
 
 button,
@@ -59,3 +71,4 @@ a {
   cursor: pointer;
 }
 
+`;
