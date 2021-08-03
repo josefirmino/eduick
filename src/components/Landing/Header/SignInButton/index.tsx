@@ -1,15 +1,36 @@
+import { signOut ,useSession } from 'next-auth/client'
+import Link from 'next/link'
 import styles from './styles.module.scss'
 import React, { useState } from 'react'
 import { Modal } from './Modal/index'
 
 export function SignInButton(){
+  const [session] = useSession()
+
   const [showModal, setShowModal ] = useState(false)
 
   const openModal = () => {
     setShowModal(prev => !prev)
   }
+ 
 
-  return (
+  return session ? (
+    <>
+    
+      <Link href="/dashboard">
+        <button type="button" className={styles.btnPrimary}>
+          Dashboard
+        </button>
+        </Link> 
+        <button 
+        type="button"
+        onClick={() => signOut()}
+      >
+        Sign Out (X)
+      </button>
+         
+    </>
+  ) : (
     <>
     <button 
       type="button"
@@ -24,5 +45,5 @@ export function SignInButton(){
           setShowModal={setShowModal}
         />
     </>
-  ) 
+  )
 }

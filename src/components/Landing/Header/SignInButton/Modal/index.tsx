@@ -215,6 +215,7 @@ const ModalContentButtons = styled.div`
     }
     &:last-child{
       margin-top: 0.8rem;
+      
       &:before{
         content: "";
         width: 24px;

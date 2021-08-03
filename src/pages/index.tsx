@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 // Components
-import { Header } from '../components/Header'
-import { ContentHero } from '../components/ContentHero'
+import { Header } from '../components/Landing/Header'
+import { ContentHero } from '../components/Landing/ContentHero'
 
 export default function Home() {
 

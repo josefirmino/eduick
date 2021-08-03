@@ -34,7 +34,13 @@ export function SignInButtonGithub(){
         width: 20%;
       }
       button{
-        background-color: #B6FC80;
+        background-color: #FF4F4F;
+        color: #fff;
+        
+      }
+      button:last-child:before{
+        color: #fff !important;
+        filter: brightness(1000%);
       }
     `}</style>
 
@@ -63,5 +69,5 @@ export function SignInButtonGithub(){
       Sing in with GitHub
     </button>
     </>
-  );
+  )
 }
