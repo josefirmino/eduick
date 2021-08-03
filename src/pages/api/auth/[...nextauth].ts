@@ -8,5 +8,5 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
       scope: 'read:user',
     }), 
-  ], 
+  ],
 })

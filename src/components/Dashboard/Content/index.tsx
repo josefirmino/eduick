@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { StarRating } from './StarRating'
 
 export function Content(){
   return(
@@ -27,7 +28,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
@@ -43,7 +44,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
@@ -59,7 +60,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
@@ -74,7 +75,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
@@ -89,7 +90,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
@@ -104,7 +105,7 @@ export function Content(){
                 <img src="/images/image-blog.png" alt="" />
               </div>
               <div className="info">
-                <img src="/images/rate.svg" alt="" />
+                <StarRating />
                 <div className="lessons">
                   <p>10 lessons</p>
                 </div>
