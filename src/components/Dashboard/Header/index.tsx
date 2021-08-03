@@ -1,9 +1,19 @@
 import { useSession } from 'next-auth/client'
+import { useState } from 'react'
 import styled from 'styled-components'
+
+import { Modal } from '../../Landing/Header/SignInButton/Modal'
 
 export function DashboardMenu(){
   const [session] = useSession()
+  const [showModal, setShowModal ] = useState(false)
+
+  const openModal = () => {
+    setShowModal(prev => !prev)
+  }
+ 
   return(
+    <>
     <Menu>
       <Container>
         <Logo>
@@ -14,13 +24,22 @@ export function DashboardMenu(){
         <Profile>
           <button>change to teacher mode</button>
           <ProfileImg>
-            <a href="#">
+            <a onClick={openModal}>
               <img src={session.user.image} alt="" />
             </a>
           </ProfileImg>
         </Profile>
       </Container>
     </Menu>
+    <MobileMenu>
+
+    </MobileMenu>
+    <Modal 
+        showModal={showModal}
+        setShowModal={setShowModal}
+      />
+    </>
+    
   )
 }
 
@@ -32,7 +51,6 @@ const Menu = styled.header`
   display: flex;
   padding: 2rem;
 `
-
 const Container = styled.div`
   display: flex;
   width: 100%;
@@ -42,7 +60,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-
 const Logo = styled.div`
   display: flex;
   justify-content: center;
@@ -70,7 +87,6 @@ const Logo = styled.div`
     }
   }
 `
-
 const Profile = styled.div`
   display: flex;
   justify-content: center;
@@ -114,4 +130,7 @@ const ProfileImg = styled.div`
     top: -3px;
     right: -3px;
   }
+`
+const MobileMenu = styled.div`
+
 `
