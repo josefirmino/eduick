@@ -69,7 +69,8 @@ export function Content(){
                 Master English: Improve Your Speaking
               </h2>
             </div>
-          </div><div className="post">
+          </div>
+          <div className="post">
             <div className="card">
               <div className="image">
                 <img src="/images/image-blog.png" alt="" />
@@ -84,7 +85,8 @@ export function Content(){
                 Master English: Improve Your Speaking
               </h2>
             </div>
-          </div><div className="post">
+          </div>
+          <div className="post">
             <div className="card">
               <div className="image">
                 <img src="/images/image-blog.png" alt="" />
@@ -99,7 +101,8 @@ export function Content(){
                 Master English: Improve Your Speaking
               </h2>
             </div>
-          </div><div className="post">
+          </div>
+          <div className="post">
             <div className="card">
               <div className="image">
                 <img src="/images/image-blog.png" alt="" />
@@ -126,7 +129,7 @@ export function Content(){
   )
 }
 
-const Background = styled.div`
+const Background = styled.div`  
   width: 100%;
   background-color: #F1F5F7;
   padding-top: 3rem;
@@ -141,6 +144,9 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #fff;
+  &:first-child{
+    margin:7rem auto 0 auto;
+  }
   &:last-child{
     background: transparent;
     margin-top: 3rem;

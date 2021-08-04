@@ -1,11 +1,11 @@
 import { useSession } from 'next-auth/client'
-
 import GlobalStyleDashboard from '../styles/dashboard-global'
 
 // Components
 import Head from 'next/head'
 import { DashboardMenu } from '../components/Dashboard/Header'
 import { Content } from '../components/Dashboard/Content'
+import { GithubLogin } from '../components/Dashboard/Login'
 
 
 export default function Dashboard(){
@@ -22,8 +22,6 @@ export default function Dashboard(){
       <Content />
     </>
   ) : (
-    <>
-      <h1>Sign in with you social account </h1>
-    </>
+    <GithubLogin/>
   )
 }

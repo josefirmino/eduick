@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/client'
+import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 
@@ -7,10 +8,16 @@ import { Modal } from '../../Landing/Header/SignInButton/Modal'
 export function DashboardMenu(){
   const [session] = useSession()
   const [showModal, setShowModal ] = useState(false)
-
+  
+  
   const openModal = () => {
     setShowModal(prev => !prev)
   }
+  
+  const [open, setOpen] = useState(true)
+  
+  const [showMobileMenu, setShowMobileMenu] = React.useState(false)
+  const onClick = () => setShowMobileMenu(true)
  
   return(
     <>
@@ -24,6 +31,9 @@ export function DashboardMenu(){
         <Profile>
           <button>change to teacher mode</button>
           <ProfileImg>
+            <a onClick={()=>setShowMobileMenu(!showMobileMenu)} >
+              <img src={showMobileMenu ? '/images/icons/arrow-chevron-down.svg' : '/images/icons/arrow-chevron-up.svg'} className="iconMobile" />
+            </a>
             <a onClick={openModal}>
               <img src={session.user.image} alt="" />
             </a>
@@ -31,9 +41,14 @@ export function DashboardMenu(){
         </Profile>
       </Container>
     </Menu>
-    <MobileMenu>
-
-    </MobileMenu>
+    { showMobileMenu ? (
+      <MobileMenu>
+       <div className="mobileContent">
+         <p>Change to teacher mode</p>
+         <img src="/images/icons/arrow-short_right.svg" alt="" />
+       </div>
+     </MobileMenu>
+    ) : null }
     <Modal 
         showModal={showModal}
         setShowModal={setShowModal}
@@ -44,6 +59,8 @@ export function DashboardMenu(){
 }
 
 const Menu = styled.header`
+  position: fixed;
+  z-index: 2;
   height: 6.4rem;
   width: 100%;
   background: #7A57FD;
@@ -83,7 +100,7 @@ const Logo = styled.div`
   
   @media (max-width:480px){
     a{
-      display: none
+      display: none;
     }
   }
 `
@@ -112,12 +129,15 @@ const Profile = styled.div`
 `
 const ProfileImg = styled.div`
   position: relative;
+  display: flex;
   img{
     width: 100%;
     border-radius: 50%;
     max-width: 3.4rem;
     margin-left: 2.8rem;
-    
+  }
+  .iconMobile{
+    display: none;
   }
   &:before{
     content: "";
@@ -130,7 +150,41 @@ const ProfileImg = styled.div`
     top: -3px;
     right: -3px;
   }
+  @media (max-width:480px){
+    .iconMobile{
+      display: block;
+    }
+  }
 `
 const MobileMenu = styled.div`
-
+  display: none;
+  @media (max-width:480px){
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: 6.4rem;
+    max-height: 100%;
+    display: flex;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    .mobileContent{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 2.8rem;
+      width: 100%;
+      height: 5.8rem;
+      z-index:2;
+      p{
+        font-weight: bold;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #7A57FD;
+      }
+    }
+  }
 `

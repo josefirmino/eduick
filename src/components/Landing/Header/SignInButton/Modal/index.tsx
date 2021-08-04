@@ -8,6 +8,7 @@ import { SignInButtonGithub } from './SignInButtonGithub'
 
 
 export const Modal = ({ showModal, setShowModal }) => {
+
   const [session] = useSession()
   const modalRef = useRef()
 
