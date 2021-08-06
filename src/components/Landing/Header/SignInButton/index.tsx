@@ -11,24 +11,15 @@ export function SignInButton(){
 
   const openModal = () => {
     setShowModal(prev => !prev)
-  }
- 
+  } 
 
   return session ? (
     <>
-    
-      <Link href="/dashboard">
+      <Link href="/courses" prefetch>
         <button type="button" className={styles.btnPrimary}>
           Dashboard
         </button>
-        </Link> 
-        <button 
-        type="button"
-        onClick={() => signOut()}
-      >
-        Sign Out (X)
-      </button>
-         
+      </Link>
     </>
   ) : (
     <>

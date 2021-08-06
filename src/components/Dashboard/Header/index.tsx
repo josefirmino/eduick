@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/client'
+import Link from 'next/link'
 import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
@@ -23,11 +24,14 @@ export function DashboardMenu(){
     <>
     <Menu>
       <Container>
-        <Logo>
-          <img src="/images/lading-detail.svg" alt="" className="detail" />
-          <img src="/images/logo.svg" alt="" className="logo" />
-          <a href="#">My Classes</a>
-        </Logo>
+          <Logo>
+            <img src="/images/lading-detail.svg" alt="" className="detail" />
+
+            <Link href="/" prefetch>
+              <img src="/images/logo.svg" alt="" className="logo" />
+            </Link>
+            <a href="#">My Classes</a>
+          </Logo>
         <Profile>
           <button>change to teacher mode</button>
           <ProfileImg>
@@ -81,6 +85,7 @@ const Logo = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  cursor: pointer;
   .detail{
     position: absolute;
     left: -9.1rem;
