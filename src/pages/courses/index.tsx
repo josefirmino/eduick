@@ -1,5 +1,6 @@
 import Prismic from '@prismicio/client'
 import { GetStaticProps } from 'next'
+import Image from 'next/image'
 import { getPrismicClient } from '../../services/prismic'
 import { useSession } from 'next-auth/client'
 import { RichText } from 'prismic-dom'
