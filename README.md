@@ -93,26 +93,26 @@ Yarn: 1.22.10
 
 ### 1 LANDING - Ao acessar, você verá a página inicial <3 localhot:3000
 
-Lading Page:
+Lading Page:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/home.gif)
-Lading Page Radio Button:
+Lading Page Radio Button:<br>
 ![Homepage Radio GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/radiobutton.gif)
-Login Github:
+Login Github:<br>
 ![Homepage Login GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/logingithub.gif)
-Lading Page:
+Lading Page:<br>
 ![Homepage image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/home.png)
-Lading Modal:
+Lading Modal:<br>
 ![Homepage Get Stated image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/getstarted.png)
 
 ### 1.1 LANDING MOBILE <3
 
-Lading Page Mobile:
+Lading Page Mobile:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobile.gif)
-Lading Page Mobile:
+Lading Page Mobile:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeMobile.png)
-Lading Page Modal:
+Lading Page Modal:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal1.png)
-Lading Page Modal:
+Lading Page Modal:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal2.png)
 
 
@@ -127,7 +127,7 @@ Prismisc API:
 
 ### 2.1 DASHBOARD MOBILE:
 
-Dashboard Page Mobile:
+Dashboard Page Mobile:<br>
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobiledashboard.gif)
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/dashboardMobile.png)
 Dashboard Page Mobile Menu:
