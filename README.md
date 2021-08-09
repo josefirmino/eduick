@@ -142,9 +142,11 @@ Prismisc API:
 ### 2.1 DASHBOARD MOBILE:
 
 Dashboard Page Mobile:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobiledashboard.gif)
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/dashboardMobile.png)
 Dashboard Page Mobile Menu:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/dashboardMenu.png)
 
 ## Features
