@@ -93,12 +93,27 @@ Yarn: 1.22.10
 
 ### 1 LANDING - Ao acessar, você verá a página inicial <3 localhot:3000
 
+Lading Page:
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/home.gif)
+Lading Page Radio Button:
 ![Homepage Radio GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/radiobutton.gif)
+Login Github:
 ![Homepage Login GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/logingithub.gif)
+Lading Page:
 ![Homepage image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/home.png)
+Lading Modal:
 ![Homepage Get Stated image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/getstarted.png)
 
+### 1.1 LANDING MOBILE <3
+
+Lading Page Mobile:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobile.gif)
+Lading Page Mobile:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeMobile.png)
+Lading Page Modal:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal1.png)
+Lading Page Modal:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal2.png)
 
 
 ### 2 DASHBOARD - Apos fazer o login com seu github você poderá acessar o dashboard =D localhot:3000/dashboard ou /courses
@@ -110,7 +125,13 @@ Prismisc API:
 ![Dashboard Prismic image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/prismic-dashboard.png)
 ![Dashboard Github image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/modalgitgub.png)
 
+### 2.1 DASHBOARD MOBILE:
 
+Dashboard Page Mobile:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobiledashboard.gif)
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/dashboardMobile.png)
+Dashboard Page Mobile Menu:
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/dashboardMenu.png)
 
 ## Features
 
