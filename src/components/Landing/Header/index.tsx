@@ -1,9 +1,15 @@
+//Default
+import Image from 'next/image'
+
 // Styles
 import styles from './styles.module.scss'
 
 // Components
 import { SignInButton } from './SignInButton'
 import { MenuMobile } from './MenuMobile'
+
+// Images
+import logo from '../../../../public/images/logo.svg'
 
 export function Header(){
   return(
@@ -12,7 +18,7 @@ export function Header(){
         <div className={styles.menu}>
           <MenuMobile />
           <a href="#">
-            <img src="/images/logo.svg" alt="Logo Eduick" />
+            <Image src={logo} alt="Logo Eduick" />
           </a>
 
           <nav>

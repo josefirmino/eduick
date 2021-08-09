@@ -1,6 +1,15 @@
-import styles from './styles.module.scss'
+// Default
 import React, { useState } from 'react'
+import Image from 'next/image'
+
+// Styles
+import styles from './styles.module.scss'
+
+// Components
 import { MenuModal } from './MenuModal/index'
+
+// Images
+import iconHamburger from '../../../../../public/images/menu-hamburger.svg'
 
 export function MenuMobile(){
   const [showModal, setShowModal ] = useState(false)
@@ -13,7 +22,7 @@ export function MenuMobile(){
     <>
     <div className={styles.menuMobile}>
       <a href="#" onClick={openModal}>
-        <img src="/images/menu-hamburger.svg" alt="" />
+        <Image src={iconHamburger} alt="Icone menu" />
       </a>
     </div>
       <MenuModal 

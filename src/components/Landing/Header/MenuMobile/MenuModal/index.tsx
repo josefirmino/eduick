@@ -1,9 +1,19 @@
+// Default
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import { useSpring, animated } from 'react-spring'
+import Image from 'next/image'
+
+// Styles
 import styled from 'styled-components'
+
+// Icons
 import { MdClose } from 'react-icons/md'
 
+// Components
 import { SignInButton } from '../../SignInButton'
+
+//Images
+import logo from '../../../../../../public/images/logo.svg'
 
 export const MenuModal = ({ showModal, setShowModal }) => {
   const modalRef = useRef()
@@ -50,7 +60,7 @@ export const MenuModal = ({ showModal, setShowModal }) => {
           <animated.div style={animation}>
             <ModalWrapper>
               <ModalContentTop>
-                <img src="/images/logo.svg" alt="" />
+                <Image src={logo} alt="Logo Eduick" />
               </ModalContentTop>
               <ModalContent>
                 <a href="#">How it works</a>

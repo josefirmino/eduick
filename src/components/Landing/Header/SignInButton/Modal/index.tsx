@@ -1,9 +1,17 @@
+// Default
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import { useSession } from 'next-auth/client'
+
+// Lib external
 import { useSpring, animated } from 'react-spring'
+
+// Styles
 import styled from 'styled-components'
+
+// Icons
 import { MdClose } from 'react-icons/md'
 
+// Components
 import { SignInButtonGithub } from './SignInButtonGithub'
 
 

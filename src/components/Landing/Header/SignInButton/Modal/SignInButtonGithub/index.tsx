@@ -1,4 +1,7 @@
+// Default
 import { signIn, signOut ,useSession } from 'next-auth/client'
+
+// Styles
 import styled from 'styled-components'
 
 export function SignInButtonGithub(){

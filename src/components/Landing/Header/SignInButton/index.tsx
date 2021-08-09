@@ -1,7 +1,12 @@
-import { signOut ,useSession } from 'next-auth/client'
-import Link from 'next/link'
-import styles from './styles.module.scss'
+// Default
 import React, { useState } from 'react'
+import { useSession } from 'next-auth/client'
+import Link from 'next/link'
+
+// Styles
+import styles from './styles.module.scss'
+
+// Components
 import { Modal } from './Modal/index'
 
 export function SignInButton(){
