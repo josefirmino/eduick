@@ -18,7 +18,9 @@ Início com NextJS:
   - Na etapa final conheci vários CMS (Prismic, Contentful, GraphCMS). Escolhi o Prismic para esse projeto pelo seu custo baixo e plano gratuito. :)
 
   - Comecei utilizando a tag <img>, por não apresentar nenhum erro segui o projeto normalmente, mas na hora de fazer o deploy acabei aprendendo mais uma coisa *: 
-    * Para uso localmente a tag <img> irá funcionar perfeitamente, porém na hora do deploy ele pede para usar a tag <Image/> do próprio next. 
+    * Para uso localmente a tag <img> irá funcionar perfeitamente, porém na hora do deploy ele pede para usar a tag <Image/> do próprio next.
+  
+  - Outro desafio foi o redirecionamento com os links.
 
 ## Tecnologias 
 
@@ -89,19 +91,36 @@ Yarn: 1.22.10
 
 ## Como usar
 
-### 1 - Ao acessar, você verá a página inicial <3 localhot:3000
+### 1 LANDING - Ao acessar, você verá a página inicial <3 localhot:3000
 
-![Homepage image]()
+![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/home.gif)
+![Homepage Radio GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/radiobutton.gif)
+![Homepage Login GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/logingithub.gif)
+![Homepage image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/home.png)
+![Homepage Get Stated image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/getstarted.png)
+
+
+
+### 2 DASHBOARD - Apos fazer o login com seu github você poderá acessar o dashboard =D localhot:3000/dashboard ou /courses
+
+![Dashboard image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/dashboard.png)
+
+Prismisc API:
+
+![Dashboard Prismic image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/prismic-dashboard.png)
+![Dashboard Github image](https://github.com/josefirmino/eduick/blob/main/public/images/readme/modalgitgub.png)
+
+
 
 ## Features
 
 Os principais recursos dessa aplicação são:
+ - Login com github para ver os cursos
  - Adicionar e remover cursos.
  - Aprender muito <3
 
-
 ## Links
-  - Deploy on Vercel: (Em breve)
+  - Deploy Vercel: (Em breve)
   - Repository: https://github.com/Lucasdfg07/Blog_Lucas_Fernandes
     - Em caso de bugs, como vulnerabilidades de segurança, por favor entrar em contato
       jose.theangelz@gmail.com
@@ -113,4 +132,4 @@ Os principais recursos dessa aplicação são:
 
   ## Author
 
-  * **Lucas Siqueira Fernandes** 
+  * **José Firmino** 
