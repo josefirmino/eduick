@@ -98,9 +98,11 @@ Lading Page:
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/home.gif)
 
 Lading Page Radio Button:
+
 ![Homepage Radio GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/radiobutton.gif)
 
 Login Github:
+
 ![Homepage Login GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/logingithub.gif)
 
 Lading Page:
@@ -112,15 +114,19 @@ Lading Modal:
 ### 1.1 LANDING MOBILE <3
 
 Lading Page Mobile:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/gifs/mobile.gif)
 
 Lading Page Mobile:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeMobile.png)
 
 Lading Page Modal:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal1.png)
 
 Lading Page Modal:
+
 ![Homepage GIF](https://github.com/josefirmino/eduick/blob/main/public/images/readme/mobile/homeModal2.png)
 
 
