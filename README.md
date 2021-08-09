@@ -44,8 +44,8 @@ Aqui estão as tecnologias utilizadas nesse projeto.
 
 Versões
 
-Node: v14.16.0
-Git: 2.25.1
+Node: v14.16.0<br>
+Git: 2.25.1<br>
 Yarn: 1.22.10
 
 * Dependências
