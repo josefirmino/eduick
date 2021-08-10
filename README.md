@@ -227,7 +227,9 @@ Agradecemos às seguintes criaturinhas que contribuíram para este projeto:
 ## Autor
 
 <a href="#">
+ <kbd> 
  <img src="https://avatars.githubusercontent.com/u/25160068?s=400&u=f0c1270685186da132a0f199d1fa0b1b71fdef1d&v=4" width="100px;" alt="" style="border-radius:50%"/>
+ </kbd>
  <br />
  <sub><b>José Firmino</b></sub> 🚀</a>
   
