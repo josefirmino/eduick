@@ -79,6 +79,8 @@ Rotas disponíveis no projeto:
 Aqui estão as tecnologias utilizadas nesse projeto.
 
 * NextJS
+* SASS
+* TypeScript
 
 ## :zap: Serviços
 
