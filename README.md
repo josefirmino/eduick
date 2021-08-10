@@ -224,9 +224,12 @@ Agradecemos às seguintes criaturinhas que contribuíram para este projeto:
 </table>
 
 
-## Author
+## Autor
 
-  * **José Firmino** 
+<a href="#">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/25160068?s=400&u=f0c1270685186da132a0f199d1fa0b1b71fdef1d&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>José Firmino</b></sub>🚀</a>
   
 #### :tv: Social Media
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/firminojuara/)](https://www.linkedin.com/in/firminojuara/)
